@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Shivam Kumar 1</string>
+
+    <string name="text1">Total Prize:</string>
+    <string name="text2">Time left to book:</string>
+    <string name="text3">ticketsold/maxticket</string>
+    <string name="purchase"> Purchase </string>
+
+</resources>

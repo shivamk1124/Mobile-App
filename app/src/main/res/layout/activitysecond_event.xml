@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/welcome_blue_background">
+
+                <TextView
+                    android:id="@+id/Title_Welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="5dp"
+                    />
+
+            <ImageView
+                android:id="@+id/Title_Bell_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bell_icon"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp" />
+
+
+            <EditText
+                android:id="@+id/searchView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Title_Welcome"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/search_background"
+                android:drawableLeft="@drawable/search_icon"
+                android:drawableRight="@drawable/resize_slider_filter_icon"
+                android:drawablePadding="3dp"
+                android:hint="Search by Event,code,location"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/white" />
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <!--Title-->
+
+                <TextView
+                    android:id="@+id/Title_RecomendedEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recommended Event"
+                    android:textSize="14sp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/Title_ViewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/underline_layerlist"
+                    android:textColor="@color/orange"
+                    android:text="View All"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="5dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <!--Child RecyclerView-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RecommendedEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                  />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:orientation="vertical"
+        android:id="@+id/allEventView">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--Title-->
+
+            <TextView
+                android:id="@+id/txtAllEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Events"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/AllEvent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+</LinearLayout>
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="bottom">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/border_white_background">
+
+
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/home_icon"
+           android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"/>
+
+        <ImageView
+            android:id="@+id/ticket"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/blackticket_icon"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"/>
+
+        <ImageView
+            android:id="@+id/game"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/game_icon"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"/>
+
+        <ImageView
+            android:id="@+id/people"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/person_icon"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"/>
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/setting_icon"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"/>
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bottomNav"
+        android:background="@drawable/border_white_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+
+        />
+
+</LinearLayout>
+
+</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
